@@ -14,15 +14,11 @@ struct Game {
   
   
   func points(sliderValue: Int) -> Int {
-    var difference: Int
-    if sliderValue > self.target {
-      difference = sliderValue - self.target
-    } else if sliderValue < self.target {
-      difference = self.target - sliderValue
-    } else {
-      difference = 0
-    }
-    var awardedPoints: Int = 100 - difference
+    let difference: Int = abs(sliderValue - self.target)
+      // difference = difference * -1
+      // or difference *= -1
+      // or difference = -difference
+    let awardedPoints: Int = 100 - difference
     return awardedPoints
   }
 }
