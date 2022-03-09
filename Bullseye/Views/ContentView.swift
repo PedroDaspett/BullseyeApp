@@ -15,7 +15,7 @@ struct ContentView: View {
   
   var body: some View {
     ZStack {
-      Color(red: 243.0, green: 248.0, blue: 253.0)
+      Color("BackgroundColor")
         .edgesIgnoringSafeArea(.all)
       VStack {
         Text("🎯🎯🎯\nPut the bullseye as close as you can to".uppercased())
@@ -38,9 +38,17 @@ struct ContentView: View {
         .padding()
         Button(action: {alertIsVisible = true}) {
           Text("Hit me!".uppercased())
+            .bold()
         }
         .padding(20.0)
-        .background(Color.blue)
+        .background(
+          ZStack {
+            Color("ButtonColor")
+            LinearGradient(
+              gradient: Gradient(
+                colors: [Color.white.opacity(0.3), Color.clear]),
+              startPoint: .top, endPoint: .bottom)
+        })
         .foregroundColor(.white)
         .cornerRadius(21.0)
         .alert("Hello there!", isPresented: $alertIsVisible) {
