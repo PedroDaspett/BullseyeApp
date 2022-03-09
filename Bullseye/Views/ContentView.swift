@@ -14,38 +14,42 @@ struct ContentView: View {
   @State private var game = Game()
   
   var body: some View {
-    VStack {
-      Text("🎯🎯🎯\nPut the bullseye as close as you can to".uppercased())
-        .bold()
-        .kerning(2.0)
-        .multilineTextAlignment(.center)
-        .lineSpacing(4.0)
-        .font(.footnote)
-      Text(String(game.target))
-        .kerning(-1.0)
-        .fontWeight(.black)
-        .font(.largeTitle)
-      HStack{
-        Text("1")
+    ZStack {
+      Color(red: 243.0, green: 248.0, blue: 253.0)
+        .edgesIgnoringSafeArea(.all)
+      VStack {
+        Text("🎯🎯🎯\nPut the bullseye as close as you can to".uppercased())
           .bold()
-        Slider(value: $sliderValue, in: 1.0...100.0)
-          .padding(12.0)
-        Text("100")
-          .bold()
-      }
-      Button(action: {alertIsVisible = true}) {
-        Text("Hit me!".uppercased())
-      }
-      .padding(20.0)
-      .background(Color.blue)
-      .foregroundColor(.white)
-      .cornerRadius(21.0)
-      .alert("Hello there!", isPresented: $alertIsVisible) {
-        Button("Awesome!") { }
-      } message: {
-        let roundedValue: Int = Int(sliderValue
-                                      .rounded())
-        Text("The slider's value is \(roundedValue)\n" + "You scored \(game.points(sliderValue: roundedValue)) points this round.")
+          .kerning(2.0)
+          .multilineTextAlignment(.center)
+          .lineSpacing(4.0)
+          .font(.footnote)
+        Text(String(game.target))
+          .kerning(-1.0)
+          .fontWeight(.black)
+          .font(.largeTitle)
+        HStack{
+          Text("1")
+            .bold()
+          Slider(value: $sliderValue, in: 1.0...100.0)
+          Text("100")
+            .bold()
+        }
+        .padding()
+        Button(action: {alertIsVisible = true}) {
+          Text("Hit me!".uppercased())
+        }
+        .padding(20.0)
+        .background(Color.blue)
+        .foregroundColor(.white)
+        .cornerRadius(21.0)
+        .alert("Hello there!", isPresented: $alertIsVisible) {
+          Button("Awesome!") { }
+        } message: {
+          let roundedValue: Int = Int(sliderValue
+                                        .rounded())
+          Text("The slider's value is \(roundedValue)\n" + "You scored \(game.points(sliderValue: roundedValue)) points this round.")
+        }
       }
     }
   }
