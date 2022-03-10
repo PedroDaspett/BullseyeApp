@@ -16,6 +16,7 @@
 		3AC79A8427D8FCF9006BD138 /* TextViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC79A8327D8FCF9006BD138 /* TextViews.swift */; };
 		3AC79A8627D9241B006BD138 /* Shapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC79A8527D9241B006BD138 /* Shapes.swift */; };
 		3AC79A8827D93584006BD138 /* RoundViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC79A8727D93584006BD138 /* RoundViews.swift */; };
+		3AC79A8A27D9636F006BD138 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC79A8927D9636F006BD138 /* BackgroundView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		3AC79A8327D8FCF9006BD138 /* TextViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViews.swift; sourceTree = "<group>"; };
 		3AC79A8527D9241B006BD138 /* Shapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shapes.swift; sourceTree = "<group>"; };
 		3AC79A8727D93584006BD138 /* RoundViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundViews.swift; sourceTree = "<group>"; };
+		3AC79A8927D9636F006BD138 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				3AC79A8327D8FCF9006BD138 /* TextViews.swift */,
 				3AC79A8527D9241B006BD138 /* Shapes.swift */,
 				3AC79A8727D93584006BD138 /* RoundViews.swift */,
+				3AC79A8927D9636F006BD138 /* BackgroundView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 				3A73D8BC27D127E0003E1A3F /* ContentView.swift in Sources */,
 				3AC79A8427D8FCF9006BD138 /* TextViews.swift in Sources */,
 				3AC79A8627D9241B006BD138 /* Shapes.swift in Sources */,
+				3AC79A8A27D9636F006BD138 /* BackgroundView.swift in Sources */,
 				3A73D8CB27D7C34F003E1A3F /* Game.swift in Sources */,
 				3A73D8BA27D127E0003E1A3F /* BullseyeApp.swift in Sources */,
 				3AC79A8827D93584006BD138 /* RoundViews.swift in Sources */,
