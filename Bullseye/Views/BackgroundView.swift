@@ -29,7 +29,7 @@ struct TopView: View {
   
   var body: some View {
     HStack {
-      RoundedImageViewStroked(systemName: "arrow.counterclockwise")
+      RestartButton(game: $game)
       Spacer()
       RoundedImageViewFilled(systemName: "list.dash")
     }
@@ -59,6 +59,19 @@ struct NumberView: View {
     }
   }
 }
+
+struct RestartButton: View {
+  @Binding var game: Game
+  
+  var body: some View {
+    Button(action: {
+      game.restart()
+    }) {
+      RoundedImageViewStroked(systemName: "arrow.counterclockwise")
+    }
+  }
+}
+
 
 struct BackgroundView_Previews: PreviewProvider {
   static var previews: some View {
