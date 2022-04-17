@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3A4A12DA27E53BAA0099CA97 /* PointsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4A12D927E53BAA0099CA97 /* PointsView.swift */; };
+		3A54659D27F5EF2300B50B2A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A54659C27F5EF2300B50B2A /* Constants.swift */; };
 		3A73D8BA27D127E0003E1A3F /* BullseyeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A73D8B927D127E0003E1A3F /* BullseyeApp.swift */; };
 		3A73D8BC27D127E0003E1A3F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A73D8BB27D127E0003E1A3F /* ContentView.swift */; };
 		3A73D8BE27D127E1003E1A3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A73D8BD27D127E1003E1A3F /* Assets.xcassets */; };
@@ -32,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		3A4A12D927E53BAA0099CA97 /* PointsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsView.swift; sourceTree = "<group>"; };
+		3A54659C27F5EF2300B50B2A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3A73D8B627D127E0003E1A3F /* Bullseye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bullseye.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A73D8B927D127E0003E1A3F /* BullseyeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BullseyeApp.swift; sourceTree = "<group>"; };
 		3A73D8BB27D127E0003E1A3F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				3A73D8CA27D7C34F003E1A3F /* Game.swift */,
+				3A54659C27F5EF2300B50B2A /* Constants.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 				3A4A12DA27E53BAA0099CA97 /* PointsView.swift in Sources */,
 				3AC79A8A27D9636F006BD138 /* BackgroundView.swift in Sources */,
 				3A73D8CB27D7C34F003E1A3F /* Game.swift in Sources */,
+				3A54659D27F5EF2300B50B2A /* Constants.swift in Sources */,
 				3A73D8BA27D127E0003E1A3F /* BullseyeApp.swift in Sources */,
 				3AC79A8827D93584006BD138 /* RoundViews.swift in Sources */,
 			);
