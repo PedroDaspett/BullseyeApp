@@ -9,6 +9,8 @@ import SwiftUI
 
 struct LeaderboardView: View {
   @Binding var leaderboardIsShowing: Bool
+  @Binding var game: Game
+  
   var body: some View {
     ZStack {
       Color("BackgroundColor")
@@ -16,7 +18,14 @@ struct LeaderboardView: View {
       VStack(spacing: 10) {
         HeaderView(leaderboardIsShowing: $leaderboardIsShowing)
         LabelView()
-        RowView(index: 1, score: 10, date: Date())
+        ScrollView {
+          VStack (spacing: 10) {
+            ForEach (game.leaderboardEntries.indices, id: \.self) { i in
+              let leaderboardEntry = game.leaderboardEntries[i]
+              RowView(index: i, score: leaderboardEntry.score, date: leaderboardEntry.date)
+            }
+          }
+        }
       }
     }
   }
@@ -29,12 +38,12 @@ struct RowView: View {
   
   var body: some View {
     HStack {
-        RoundedTextView(text: String(index))
+      RoundedTextView(text: String(index))
       Spacer()
-        ScoreTextView(score: score)
+      ScoreTextView(score: score)
         .frame(width: Constants.Leaderboard.leaderboardScoreColWidth)
       Spacer()
-        DateTextView(date: date)
+      DateTextView(date: date)
         .frame(width: Constants.Leaderboard.leaderboardDateColWidth)
     }
     .background(
@@ -55,7 +64,6 @@ struct HeaderView: View {
   var body: some View {
     ZStack {
       HStack {
-        
         if verticalSizeClass == .regular && horizontalSizeClass == .compact {
           BigBoldTextView(text: "Leaderboard")
             .padding(.leading)
@@ -64,13 +72,24 @@ struct HeaderView: View {
           BigBoldTextView(text: "Leaderboard")
         }
       }
+      .padding(.top)
       HStack {
         Spacer()
-        Button(action: {
-          leaderboardIsShowing = false
-        }) {
-        RoundedImageViewFilled(systemName: "xmark")
-          .padding(.trailing)
+        if verticalSizeClass == .regular && horizontalSizeClass == .compact {
+          Button(action: {
+            leaderboardIsShowing = false
+          }) {
+            RoundedImageViewFilled(systemName: "xmark")
+              .padding(.trailing)
+          }
+        } else {
+          Button(action: {
+            leaderboardIsShowing = false
+          }) {
+            RoundedImageViewFilled(systemName: "xmark")
+              .padding(.trailing)
+              .padding(.top)
+          }
         }
       }
     }
@@ -98,14 +117,15 @@ struct LabelView: View {
 
 struct LeaderboardView_Previews: PreviewProvider {
   static private var leaderboardIsShowing = Binding.constant(false)
+  static private var game = Binding.constant(Game(loadTestData: true))
   
   static var previews: some View {
-    LeaderboardView(leaderboardIsShowing: leaderboardIsShowing)
-    LeaderboardView(leaderboardIsShowing: leaderboardIsShowing)
+    LeaderboardView(leaderboardIsShowing: leaderboardIsShowing, game: game)
+    LeaderboardView(leaderboardIsShowing: leaderboardIsShowing, game: game)
       .previewLayout(.fixed(width: 568, height: 320))
-    LeaderboardView(leaderboardIsShowing: leaderboardIsShowing)
+    LeaderboardView(leaderboardIsShowing: leaderboardIsShowing, game: game)
       .preferredColorScheme(.dark)
-    LeaderboardView(leaderboardIsShowing: leaderboardIsShowing)
+    LeaderboardView(leaderboardIsShowing: leaderboardIsShowing, game: game)
       .preferredColorScheme(.dark)
       .previewLayout(.fixed(width: 568, height: 320))
   }
