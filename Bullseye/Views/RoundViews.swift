@@ -57,13 +57,30 @@ struct RoundedRectTextView: View {
   }
 }
 
-struct PreviewView: View {
+struct RoundedTextView: View {
+  var text: String
+  
+  var body: some View {
+    Text(text)
+      .font(.title3)
+      .bold()
+      .foregroundColor(Color("TextColor"))
+      .frame(width: Constants.General.roundedViewLength, height: Constants.General.roundedViewLength)
+      .overlay(
+        Circle()
+          .strokeBorder(Color("LeaderboardRowColor"), lineWidth: Constants.General.strokeWidth)
+      )
+  }
+}
+
+struct PreviewRoundView: View {
   var body: some View {
     HStack {
       VStack(spacing: 10) {
         RoundedImageViewStroked(systemName: "arrow.counterclockwise")
         RoundedImageViewStroked(systemName: "list.dash")
         RoundedRectTextView(text: "100")
+        RoundedTextView(text: "1")
       }
       VStack(spacing: 10) {
         RoundedImageViewFilled(systemName: "arrow.counterclockwise")
@@ -75,8 +92,8 @@ struct PreviewView: View {
 
 struct RoundViews_Previews: PreviewProvider {
   static var previews: some View {
-    PreviewView()
-    PreviewView()
+    PreviewRoundView()
+    PreviewRoundView()
       .preferredColorScheme(.dark)
   }
 }

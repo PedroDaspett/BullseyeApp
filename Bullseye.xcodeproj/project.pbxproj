@@ -19,6 +19,7 @@
 		3AC79A8627D9241B006BD138 /* Shapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC79A8527D9241B006BD138 /* Shapes.swift */; };
 		3AC79A8827D93584006BD138 /* RoundViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC79A8727D93584006BD138 /* RoundViews.swift */; };
 		3AC79A8A27D9636F006BD138 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC79A8927D9636F006BD138 /* BackgroundView.swift */; };
+		3AD35CAF280CE27200A1DFE8 /* LeaderboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD35CAE280CE27200A1DFE8 /* LeaderboardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		3AC79A8527D9241B006BD138 /* Shapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shapes.swift; sourceTree = "<group>"; };
 		3AC79A8727D93584006BD138 /* RoundViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundViews.swift; sourceTree = "<group>"; };
 		3AC79A8927D9636F006BD138 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		3AD35CAE280CE27200A1DFE8 /* LeaderboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 				3AC79A8727D93584006BD138 /* RoundViews.swift */,
 				3AC79A8927D9636F006BD138 /* BackgroundView.swift */,
 				3A4A12D927E53BAA0099CA97 /* PointsView.swift */,
+				3AD35CAE280CE27200A1DFE8 /* LeaderboardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 				3A4A12DA27E53BAA0099CA97 /* PointsView.swift in Sources */,
 				3AC79A8A27D9636F006BD138 /* BackgroundView.swift in Sources */,
 				3A73D8CB27D7C34F003E1A3F /* Game.swift in Sources */,
+				3AD35CAF280CE27200A1DFE8 /* LeaderboardView.swift in Sources */,
 				3A54659D27F5EF2300B50B2A /* Constants.swift in Sources */,
 				3A73D8BA27D127E0003E1A3F /* BullseyeApp.swift in Sources */,
 				3AC79A8827D93584006BD138 /* RoundViews.swift in Sources */,
